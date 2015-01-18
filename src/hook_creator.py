@@ -8,6 +8,7 @@ if __name__ == "__main__":
 	a=0
 	print get_cpu_usage()
 	print get_io_usage()
+    pass
 
 
 
