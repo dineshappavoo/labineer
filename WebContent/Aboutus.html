@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="csshorizontalmenu.css" />
+<title>Untitled Document</title>
+<script>
+
+var rotate = new Array();
+	rotate[1] = new  Array();
+	rotate[1][0] = '<img src="images/index_34.jpg" width="137px;" height="137px;"/>';
+	
+	rotate[2] = new  Array();
+	rotate[2][0] = '<img src="images/mediana_cat_4.jpg" width="137px;" height="137px;"/>';
+	
+	rotate[3] = new  Array();
+	rotate[3][0] = '<img src="images/patientmonitor.jpg" width="137px;" height="137px;"/>';
+	
+	rotate[4] = new  Array();
+	rotate[4][0] = '<img src="images/Ventilator.jpg" width="137px;" height="137px;"/>';
+	
+	
+	
+	arrCnt=1;
+	 
+	function viewer_display()
+	{
+		if (arrCnt>4)
+		{
+			arrCnt=1;
+		}
+		document.getElementById("slideinfo").innerHTML=rotate[arrCnt][0];
+		window.setTimeout("viewer_display()",5000);
+		//alert(rotate[arrCnt][0]);
+		arrCnt++;
+	}
+
+
+var  ContentHeight = 150;
+var TimeToSlide = 250.0;
+
+var openAccordion = '';
+runAccordion(1);
+function runAccordion(index)
+{
+  var nID = "Accordion" + index + "Content";
+  if(openAccordion == nID)
+    nID = '';
+   
+  setTimeout("animate(" + new Date().getTime() + "," + TimeToSlide + ",'"
+      + openAccordion + "','" + nID + "')", 33);
+ 
+  openAccordion = nID;
+}
+
+function  animate(lastTick, timeLeft, closingId, openingId)
+{  
+  var curTick = new Date().getTime();
+  var elapsedTicks = curTick - lastTick;
+ 
+  var opening = (openingId == '') ? null : document.getElementById(openingId);
+  var closing = (closingId == '') ? null : document.getElementById(closingId);
+ 
+  if(timeLeft <= elapsedTicks)
+  {
+    if(opening != null)
+      opening.style.height = ContentHeight + 'px';
+   
+    if(closing != null)
+    {
+      closing.style.display = 'none';
+      closing.style.height = '0px';
+    }
+    return;
+  }
+ 
+  timeLeft -= elapsedTicks;
+  var newClosedHeight = Math.round((timeLeft/TimeToSlide) * ContentHeight);
+
+  if(opening != null)
+  {
+    if(opening.style.display != 'block')
+      opening.style.display = 'block';
+    opening.style.height = (ContentHeight - newClosedHeight) + 'px';
+  }
+ 
+  if(closing != null)
+    closing.style.height = newClosedHeight + 'px';
+
+  setTimeout("animate(" + curTick + "," + timeLeft + ",'"
+      + closingId + "','" + openingId + "')", 33);
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table width="900" height="382" align="center" bgcolor="#FFFFFF" border="0" class="page">
+  <tr>
+    <td width="266" height="52"><img src="images/logotextleft.png" /></td>
+    <td width="624"><table width="100%" height="63" border="0" id="headerright" cellpadding="0">
+      <tr>
+        <td style="color:#FFCC00;font-size:9px;font-weight:bold;"><img src="images/headericonbandleft.jpg"/></td><td align="left">
+		<a href="index.html" style="color:#FFCC00;text-decoration:none;cursor:pointer;"><img src="images/homeicon.jpg" border="0"/></a>&nbsp;&nbsp;<a style="color:#FFCC00;text-decoration:none;cursor:pointer;"><img src="images/contactusicon.jpg" border="0"/></a>&nbsp;&nbsp;<a style="color:#FFCC00;text-decoration:none;cursor:pointer;"><img src="images/aboutus.jpg" border="0"/></a><a style="color:#FFCC00;text-decoration:none;cursor:pointer;"><img src="images/registericon.jpg" border="0"/></a>&nbsp;&nbsp;<a style="color:#FFCC00;text-decoration:none;cursor:pointer;"><img src="images/loginicon.jpg"/></a>&nbsp;&nbsp;<a style="color:#FFCC00;text-decoration:none;cursor:pointer;"><img src="images/helpicon.jpg" border="0"/></a></td>
+        <td align="left"><img src="images/headericonband.jpg" width="199" height="33"/></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td colspan="2" align="right" valign="top"><span style="color:#000;font-size:14px;font-weight:bold;">Search:</span><input type="text" size="35" height="15"/> <img src="images/search.jpg"/></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+     
+        <td height="25" colspan="2" valign="top" background="images/blackglossy.PNG">
+		<span class="menu"><a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Products.html">Products</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Services.html">Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Partners.html" >Partners</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Aboutus.html">Aboutus</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Contactus.html">Contactus</a></span>&nbsp;&nbsp;</td>
+  </tr>
+	  <tr>
+	  	<td height="238" width="100%" colspan="2" valign="top">
+		<table width="98%" height="236">
+		<tr><td width="158" height="230" valign="top"><div class="AccordionContainer">
+          <div onclick="runAccordion(1);">
+            <div class="AccordionTitle" onselectstart="return false;"> <b>Equipments</b></div>
+			
+          </div>
+		  <div id="Accordion1Content" class="AccordionContent">
+		  <ul>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Patient Monitoring System</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Pulse Oxiometer</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Ventilator</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Infusion Pumps</a></li>
+		  </ul>
+           
+		    </div>
+		  <div onclick="runAccordion(2);">
+            <div class="AccordionTitle" onselectstart="return false;"><b> Disposables</b></div>
+		    </div>
+		  <div id="Accordion2Content" class="AccordionContent">
+            <ul>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="Facemask.html">Face Mask</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="Handgloves.html">Hand Gloves </a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="Shoecover.html">Shoe Cover</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="Sleevecover.html">Sleeve Cover</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="Surgicalgown.html">Surgical Gown</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="Sanitarynapkins.html">Sanitary Napkins</a></li>
+		  </ul>
+			
+		    </div>
+		  <div onclick="runAccordion(3);">
+            <div class="AccordionTitle" onselectstart="return false;"><b> Services</b></div>
+		    </div>
+		  <div id="Accordion3Content" class="AccordionContent">
+            <ul>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Equipment Maintanace</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Equipment Service</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Service Agreement</a></li>
+		  <li style="list-style-type:square;margin-left:-12px;"><a href="#">Request For Brochure</a></li>
+		  </ul>
+			
+		    </div>
+		  </div>
+		    <p>&nbsp;</p></td><td width="780" valign="top"><table width="100%" border="0" >
+             <tr>
+               <td width="45%" class="productstop" align="right"><p><img src="images/addsubnews.png" width="359" height="49" /></p>                </td>
+               <td width="45%" class="productstop" align="right"><img src="images/addplaceorder.png" width="364" height="50" /></td>
+             </tr>
+             <tr>
+               <td colspan="2" valign="top"><p><strong>About us</strong><br />
+Labineer is a medical  services company, delivering health care products, utilities and devices. A  robust service model, enabling quality product deliverables at lower costs with  high availability provides uncompromising edge to our business partners.<br />
+Based from Chennai-India, we  deliver products all over India. We guarantee high service level agreement  compliance, thus adding seamless integration with our business partners  business needs.<br />
+We deal medical devices,  products and surgical disposables and medical accessories. <br />
+<strong>Mission</strong><strong>&nbsp; </strong>&nbsp;:&nbsp;  Delivering tools and aids to caregivers and health care experts,  enabling them to achieve better results for all stake holders<br />
+<strong>Vision </strong>&nbsp;&nbsp;: &nbsp;To emerge as global leaders in health care  services, providing quality services to health institutions world wide</p>
+                 <p>&nbsp;</p></td>
+             </tr>
+            
+           </table>
+		   </td>
+		</tr>
+		
+		</table>
+		</td>
+		
+	  </tr>
+     
+      <tr>
+       <td colspan="3" background="images/wrapper_background.jpg" height="35px;" align="center">
+    <span class="footercontent">Copyright &copy; Labineer.com. All rights reserved. Designed by Nithyanandam</span> <br>
+      <span class="style5"><a href="#">Terms of Use</a>   |   <a href="#">Privacy Policy</a></span>    </td>
+      </tr>
+</table><script>viewer_display();header_display();</script>
+</body>
+</html>

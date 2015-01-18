@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+    <form-beans>      
+        <form-bean name="ProductsForm" type="com.form.ProductsForm"></form-bean>
+        <form-bean name="ContactusForm" type="com.form.ContactusForm"></form-bean>
+    </form-beans>
+    <global-exceptions>
+    </global-exceptions>
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+    <action-mappings>
+        
+        <action path="/products" name="ProductsForm" input="Products.jsp" scope="request" type="com.action.DisplayProductsAction" parameter="method">
+            <forward name="products" path="/Products.jsp"/>
+            <forward name="disposables" path="/Disposables.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+         
+        <action path="/productdetails" name="ProductsForm" input="Products.jsp" scope="request" type="com.action.DisplayDetailsAction" parameter="method">
+            <forward name="success" path="/result.jsp"/>
+            <forward name="disposables" path="/Disposables.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+        
+        
+        <action path="/contactus" name="ContactusForm" input="Contactus.jsp" scope="request" type="com.action.ContactusAction" parameter="method">
+            <forward name="success" path="/ContactusSuccess.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+    </action-mappings>    
+    <message-resources parameter="ApplicationResource"/>    
+</struts-config>

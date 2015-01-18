@@ -1,0 +1,367 @@
+body {
+  
+background-image:url(../images/background_gradient.png);
+left:0px;right:0px;width:100%;height:100%;
+   top:0px;
+}
+ .page{
+	 background-color:#FFF;
+	 border: 1px solid #CCCCCC;
+	 /*border-right: 1px solid #333;*/
+	
+ }
+ 
+#bullet{
+	height:8px;
+	width:8px;
+}
+#wrapper{
+		border-left: 1px solid #666666;
+		border-right: 1px solid #666666;
+		width:800;
+		 
+	}
+#header{
+		
+		background:#FFFFFF;
+		height:150px;
+}
+#headerseperator
+	{
+		 width:800px;
+		 color:#000080;
+}
+.contactus a{
+		text-decoration:none;
+}
+.leftmenu{
+		background-image:url(..images/equipmentbg.png);
+		width:95%;
+		margin-left:5px;
+	}
+.leftmenu td{
+	width:95%;
+	background-image:url(../images/menuitembg.PNG);
+	margin-left:5px;
+	color:#000;
+	align:center;
+	font-family:Tahoma, Geneva, sans-serif;
+  	font-size:12px;
+  	font-style:solid;
+	}
+.leftmenu td:hover{
+	
+	background-image:url(../images/bl.png);
+	color:#FFFFFF;
+	}
+.leftmenu a{
+	text-decoration:none;
+	color:#36648B;;
+	}
+.leftmenu a:hover{
+	
+	text-decoration:none;
+	color:#FFFFFF;
+	}
+.menu{
+	color:#FFFFFF;
+	float:right;
+	font-size:16px;
+	
+	}
+.menu a{
+	color:#FFFFFF;
+	font-size:13px;
+	 
+}
+.menu a:hover{
+	color: #FFCC33;
+	font-size:13px;
+}
+.menu td:hover{
+	
+	background-image:url(../images/bl.png);
+	}
+.AccordionTitle
+{
+  height:40px;
+  width:135px;
+  padding:4px;
+  overflow:hidden;
+  cursor:pointer;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:12px;
+  font-style:solid;
+  vertical-align:middle;
+  text-align:left;
+  background-repeat:repeat-x;
+  display:table-cell;
+  /*background-image:url("../images/blackglossy.PNG");*/
+  color:#003;
+  -moz-user-select:none;
+  
+}
+
+.AccordionContent
+{
+  
+  overflow:hidden;
+  display:none;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:9px;
+  font-style:solid;
+  color:#36648B;;
+  height:auto;
+  padding-bottom:0px;
+  text-align:left;
+}
+ 
+.AccordionContent td a{
+	font-family:Geneva, sans-serif;
+	font-variant: normal;
+	font-size:12px;
+    font-style:normal;
+    color:#36648B;
+}
+.Accordionlinks a{
+	font-size:9px;
+  font-style:solid;
+  color:#36648B;;
+  style="font-style:solid;
+  font-weight:lighter;"
+}
+.AccordionContainer
+{
+  width:155px;
+ 
+  border-top: solid 1px #CCCCCC;
+  border-bottom: solid 1px #CCCCCC;
+  border-left: solid 1px #CCCCCC;
+  border-right: solid 1px #CCCCCC;
+                
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+ 
+#menuitem{
+	
+	
+	
+	padding:5px;
+	font-size:10px;
+	font-weight:bold;
+	color:#600;
+	
+}
+
+#menuitem a{
+	text-decoration:none;
+}
+#pagebody{
+
+	width:80%;
+	background:#CCCCCC;
+	border:1px solid #CCCCCC;
+
+	}
+.row{
+	 
+ 	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+}
+
+
+td {
+	line-height:15px;
+	color: #333;
+	font-family:calibri;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+}
+.tablehead{
+	background-image:url(images/redtab.PNG);
+	}
+h1, h2, h3, h4, h5 {
+
+    color: #333;
+    margin: 0px;
+}
+
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+	height:15px;
+	color:#000;
+	
+}
+
+h3 {
+    font-size: 14px;
+}
+
+
+a {
+
+	font: bold 12px Calibri, Tahoma;
+	color: #414141;
+ 	text-decoration: none;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	border:0px;
+}
+
+a:hover {
+	color: #FFCC33;
+	text-decoration: none;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+
+}
+
+a.white-link-underline {	
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.white-text{
+color: #ffffff;
+font: bold 12px Calibri, Arial;
+}
+
+
+.blye-text-underline {
+color: #348cbc;
+text-decoration: underline;
+}
+
+.blye-text-regular {
+color: #348cbc;
+}
+
+.yellow-text-regular {
+color: #db9a00;
+}
+
+.yellow-text-underline {
+color: #db9a00;
+text-decoration: underline;
+}
+
+.orange-text-regular {
+color: #ca6011;
+}
+
+.orange-text-underline {
+color: #ca6011;
+text-decoration: underline;
+}
+
+.red-text-regular {
+color: #920f0d;
+}
+
+.red-text-underline {
+color: #920f0d;
+text-decoration: underline;
+}
+
+
+.gray-text{
+color: #4c4c4c;
+}
+
+.green-text{
+color: #930;
+font-size:15px;
+}
+#imagelink{
+text-decoration:none;
+
+}
+.footercontent{
+	color:#FFF;
+	text-align:center;
+	  text-decoration:none;
+}
+#headerright{
+	border:0px;
+	 
+}
+.productstop{
+	
+}
+.disposablestable td
+{
+}
+.imagetitle{
+font-family:Copperplate Gothic Light;font-size:12px;color:#006699;
+}
+.leftnav{
+	background-image:url(../images/blueback.png);
+	
+	
+}
+.detailstable{
+	 
+	font-family:calibri;
+	font-style:solid;
+	width:100%;
+	left:50px;
+}
+.detailstable tr{
+	 
+	font-family:calibri;
+	font-style:solid;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:1px solid #999999;
+}
+.detailstable th{
+
+}
+.detailstable td{
+
+text-align:justify;
+vertical-align:middle;
+}
+.subheading{
+	color:#003366;
+	font-size:14px;
+	font-style:solid;
+	font-weight:bold;
+	 
+	width:100%;
+}
+ 
+ .formfield{
+	font-family:calibri;
+ 	width:200px;
+
+ }
+ .headingcareer{
+ background-color:#cccccc;
+ font-size: 14px;
+ font-weight: bold;
+ }
+ .career{
+ border-left:1px solid #cccccc;
+  border-top:1px solid #cccccc;
+   border-right:1px solid #cccccc;
+    border-bottom:1px solid #cccccc;
+ }
+ .menuimage{
+ 
+ 	height: 
+ 	}
